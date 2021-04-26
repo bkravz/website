@@ -43,17 +43,23 @@ body
     color: #999;
     letter-spacing: .39px;
 }
+/* .section-item-detail a:link, .section-item-detail a:active, .section-item-detail a:hover, .section-item-detail a:visited { */
+a:link, a:hover, a:visited, a:active {
+	color: #044553;
+	font-weight: bold;
+}
 .underline{
 	height: 2px;
 	width: 50px;
 	margin: 0px auto 60px;
+	background: #044553;
 }
 /*=================================================
 ||				3. Header
 ==================================================*/
 .header
 {
-	background: url('../images/multipage-header.jpg');
+	background: url('../images/CoverPage.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -80,10 +86,10 @@ body
     background-color: #FFF;
 }
 .navbar-fixed-top .navbar-toggle .icon-bar {
-    background-color: #313131;
+    background-color: #044553;
 }
 .navbar-fixed-top .navbar-toggle{
-	border-color: #313131;
+	border-color: #044553;
 }
 .navbar-default {
     background-color: transparent;
@@ -126,7 +132,7 @@ body
 .header-wrapper{
 	text-align: center;
 	display: table-cell;
-	vertical-align: middle;
+	vertical-align: bottom;
 	position: relative;
 }
 .header-table{
@@ -149,7 +155,8 @@ body
 .service{
 	background: #ededed;
 	position: relative;
-}
+	display: none;
+	}
 .service .section-title{
 	margin-top: 110px;
 }
@@ -164,11 +171,13 @@ body
 	bottom: 0px;
 }
 
-.twitter-feed{
-	color: #fff;
-}
 .item{
 	text-align: center;
+}
+
+.add{
+	text-align: center;
+	display: none;
 }
 .owl-prev, .owl-next
 {
@@ -199,6 +208,13 @@ body
 /*=================================================
 ||				5. Twitter Feed
 ==================================================*/
+.twitter-feed{
+	color: #fff;
+	display: none;
+}
+.review-feed{
+	color: #fff;
+}
 .day, .feed{
 	font-size: 15px;
 	font-weight: 200;
@@ -222,76 +238,22 @@ body
 .item:hover{
 	cursor: w-resize;
 }
-/*=================================================
-||				7. Portfolio
-==================================================*/
-.porfolio{
-	background: #f9f9f9;
-}
-.portfolio-img{
-	position: relative;
-	overflow: hidden;
-	text-align: center;
-}
-.portfolio-img .port-item{
-	width: 100%;
-	height: auto;
-	transition: all .6s ease-in-out;
-}
-.portfolio-img:hover .portfolio-img-hover{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	transition: all .6s ease-in-out;
-	background: rgba(0, 0, 0, 0.5);
-}
-.portfolio-img-hover{
-
-}
-.plus{
-	display: none;
-}
-.portfolio-img:hover .plus{
-	display: inline-block;
-	padding-top: 25%;
-}
-.portfolio-img:hover .port-item{
-	transform: scale(1.1);
-}
-.portfolio-item-details{
-	margin: 20px 0px 50px; 
-}
-.portfolio-item-name{
-	display: inline-block;
-	font-size: 15px;
-}
-.port-heart, .portfolio-item-name small{
-	font-size: 13px;
-	color: #969595;
-}
-.port-heart{
-	float: right;
-	display: inline-block;
-	margin-top: 10px;
-}
-
 
 /*=================================================
 ||				8. Note
 ==================================================*/
 .note{
 	color: #dadada;
+	display: none;
 }
 .quote{
 	font-style: italic;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 200;
 	padding: 0px 145px;
 }
 .quoter{
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 400;
 	margin-top: 20px;
 }
@@ -300,13 +262,13 @@ body
 ||				9. Fun Facts
 ==================================================*/
 .fun{
-	background: #f3f3f3;
+	background: transparent;
 }
 .fun-box{
-	border: 2px solid #313131;
+	border: 2px solid #044553;
 	text-align: center;
 	padding: 40px 0px;
-	font-size: ;
+	font-size: 12px;
 }
 .number{
 	font-weight: 700;
@@ -324,27 +286,57 @@ body
 ||				10. Footer
 ==================================================*/
 footer{
-	background: #eaeaea;
+	background: #044553;
 	padding: 20px 0px;
 }
 .copy{
 	font-size: 14px;
 	font-weight: 300;
-	color: #929292;
+	color: #ededed;
 	padding: 10px 0px;
 	display: inline-block;
 }
+
+footer a:link {
+	color: #ededed;
+}
+footer a:visited {
+	color: #ededed;
+}
+footer a:active {
+	color: #ededed;
+}
+footer a:hover {
+	color: #ededed;
+	font-weight: bold;
+}
+
+
+
+
 .fb{
 	background: #1976d2;
 }
+.insta{
+	background: transparent;
+}	
 .twitter{
 	background: #2CAAE1;
+}
+.linkedin{
+	background: transparent;
+}
+.youtube{
+	background: transparent;
 }
 .google{
 	background: #c62828;
 }
 .rss{
 	background: #ff8f00;
+}
+.imdb{
+	background: transparent;
 }
 
 .icon{
@@ -369,17 +361,33 @@ a .fb:hover{
 	color: #1976d2;
 	border-color: #1976d2;
 }
+a .insta:hover{
+	color: #c32aa3;
+	border-color: #c32aa3;
+}	
 a .twitter:hover{
 	color: #2CAAE1;
 	border-color: #2CAAE1;
+}
+a .linkedin:hover{
+	color: #0a66c2;
+	border-color: #0a66c2;
 }
 a .google:hover{
 	color: #c62828;
 	border-color: #c62828;
 }
+a .youtube:hover{
+	color: #ff0000;
+	border-color: #ff0000;
+}
 a .rss:hover{
 	color: #ff8f00;
 	border-color: #ff8f00;
+}
+a .imdb:hover{
+	color: #f1c400;
+	border-color: #f1c400;
 }
 
 /*=================================================
@@ -389,6 +397,7 @@ a .rss:hover{
 .testimonial{
 	background: url('../images/testimonial.png');
 	color: #fff;
+	display: none;
 }
 .testimonial .section-title{
 	color: #fff;
@@ -474,7 +483,7 @@ a .rss:hover{
 	.navbar-default .navbar-brand{
 		margin-left: 15px;
 	}
-		img.about-img {
+	img.about-img {
 	    width: 100%;
 	    padding: 15px 15px 0px;
 	}
@@ -487,3 +496,44 @@ a .rss:hover{
 		max-height: 627px;
 	}
 }
+
+/*=================================================
+||				12. Custom Colors
+==================================================*/
+.highlight {
+	background: #E8D5C7;
+	color: #767A65
+}
+.highlight a:link {
+	color: #915335;
+}
+.highlight a:visited {
+	color: #915335;
+}
+.highlight a:active {
+	color: #915335;
+}
+.highlight a:hover {
+	color: #B29A86;
+}
+
+.footlight {
+	background: #044553;
+	background-color: #044553;
+}
+/* Colors we like
+Dark blue #23313B
+Med blue #607077
+Light blue #91A2A7
+Med green #767A65
+++ Dark brown #915335
+++ Med brown #B29A86
+++ Light brown #E8D5C
+++ Ocean Dark Teal ##044553
+Ocean Navy ##152636
+Ocean Med Blue ##259faf
+Ocean Teal ##57b8bc
+Ocean Lt blue ##b4d2d3
+Nice light brown #f3f3f3
+Off-white #EDEDED
+*/
