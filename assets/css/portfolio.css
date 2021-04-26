@@ -1,3 +1,68 @@
 .section-background{
-	background: url('../images/portfolio.png');
+	background: url('../images/PortugalCoast.JPG');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	overflow: hidden;
+	background-size: cover;
+	background-attachment: local;
+	height: 20vh;
+	/* max-height: 200px; */
+	color: #fff;
+	text-transform: uppercase;
+}
+/*=================================================
+||				7. Portfolio
+==================================================*/
+.porfolio{
+	background: transparent;
+}
+.portfolio-img{
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+.portfolio-img .port-item{
+	width: 100%;
+	height: auto;
+	/* max-height: 200px; */
+	transition: all .6s ease-in-out;
+}
+.portfolio-img:hover .portfolio-img-hover{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all .6s ease-in-out;
+	background: rgba(0, 0, 0, 0.5);
+}
+.portfolio-img-hover{
+
+}
+.plus{
+	display: none;
+}
+.portfolio-img:hover .plus{
+	display: inline-block;
+	padding-top: 25%;
+}
+.portfolio-img:hover .port-item{
+	transform: scale(1.1);
+}
+.portfolio-item-details{
+	margin: 20px 0px 50px; 
+}
+.portfolio-item-name{
+	display: inline-block;
+	font-size: 15px;
+}
+.port-heart, .portfolio-item-name small{
+	font-size: 13px;
+	color: #969595;
+}
+.port-heart{
+	float: right;
+	display: inline-block;
+	margin-top: 10px;
+	display: none;
 }
