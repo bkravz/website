@@ -1,5 +1,14 @@
 .section-background{
-	background: url('../images/contact.png');
+    background: url('../images/PortugalCoast.JPG');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	overflow: hidden;
+	background-size: cover;
+	background-attachment: local;
+	height: 20vh;
+	/* max-height: 200px; */
+	color: #fff;
+	text-transform: uppercase;
 }
 .contact{
     text-align: left;
@@ -20,8 +29,8 @@
     transition: all .6s ease-in-out;
 }
 .contact-item:hover i{
-    background-color: #4a148c;
-    border: 2px solid #4a148c !important;
+    background-color: #044553;
+    border: 2px solid #044553 !important;
     color: #fff;
 }
 .contact h3{
@@ -36,6 +45,7 @@
 .form{
     margin-top: 50px;
     background: #f9f9f9;
+    display: none;
 }
 .form h3{
     margin-left: 15px;
@@ -45,21 +55,23 @@
     margin: 0px 15px;
     height: 180px;
     width: 98%;
+    display: none;
 }
 .btn-sub {
     border-radius: 0px;
     color: white;
-    background-color: #4a148c;
+    background-color: #23313B;
     padding: 10px 25px;
     margin: 10px 30px;
-    border-color: #4a148c;
+    border-color: #23313B;
     text-transform: uppercase;
     transition: all .4s ease-in-out;
+    display: none;
 }
 .btn-sub:hover{
     background-color: #fff;
-    border-color: #4a148c;
-    color: #4a148c;
+    border-color: #23313B;
+    color: #23313B;
 }
 input[type="username"], input[type="email"], input[type="text"], .message{
 	border-color: transparent;
@@ -68,7 +80,7 @@ input[type="username"], input[type="email"], input[type="text"], .message{
 	color: #969595;
 }
 input[type="username"]:focus, input[type="email"]:focus, input[type="text"]:focus, .message:focus{
-    border-color: #4a148c;
+    border-color: #23313B;
     box-shadow: 0 0 8px rgba(74,20,140,.1) !important;
 }
 input.form-control, .message {
