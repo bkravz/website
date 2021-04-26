@@ -1,9 +1,19 @@
 .section-background{
-	background: url('../images/services.png');
+	background: url('../images/PortugalCoast.JPG');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	overflow: hidden;
+	background-size: cover;
+	background-attachment: local;
+	height: 20vh;
+	/* max-height: 200px; */
+	color: #fff;
+	text-transform: uppercase;
 }
 
 .price-table{
 	background: #ededed;
+	display: none;
 }
 .price-table .col-sm-3{
 	padding: 0px;
