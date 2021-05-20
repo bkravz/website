@@ -25,21 +25,64 @@
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    min-width: 560;
-    min-height: 315;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: fit-content;
+    height: fit-content;
+    max-width: 90%;
+    max-height: 90%;
+    /* min-width: auto; */
+    /* min-height: auto; */
+    text-align: center;
   }
+
+  /* Modal box for video */
+  .modal-content-vid {
+    margin: 10% auto; /* 15% from the top and centered */
+    background-color: #fefefe;
+    position: relative;
+    border: 1px solid #888;
+    width: 90%;
+    /* height: fit-content; */
+    max-width: 90%;
+    /* max-height: 90%; */
+    padding-bottom: 56.25%; /* Sets to 16:9 */
+    /* max-width: 90%; */
+    /* min-width: auto; */
+    /* min-height: auto; */
+    text-align: center;
+  }
+
+  /* Video wrapper */
+  .modal-vid-wrapper {
+    position: relative;
+    /* margin: 15% auto;  */
+    /* padding: 20px; */
+    overflow: hidden;
+    
+    text-align: center;
+    height: 0;
+    padding-bottom: 56.25%; /* Sets to 16:9 */
+  }
+
+  /* Youtube iframe */
+ .modal-vid-wrapper iframe {
+    /* position: relative; */
+    margin: 5% auto;
+    position: absolute;
+    /* display: block; */
+    /* padding: 20px; */
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    max-width: 90%;
+    /* width="560" height="315" */
+}
 
   /* Modal Image */
   .modal-img {
-    width: fit-content;
+    max-height: 100%;
+    max-width: 100%;
   }
-  /* Youtube iframe */
- .iframe {
-    display: block;
-    width: auto;
-    /* width="560" height="315" */
-}
 
   /* The Close Button */
   .close {

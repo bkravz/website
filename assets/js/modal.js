@@ -9,27 +9,41 @@ for (const el of openEls) {
   });
 }
 
+// Case: Clicked X button
 for (const el of closeEls) {
   el.addEventListener("click", function() {
     this.parentElement.parentElement.classList.remove(isVisible);
     // Reload src to force video player to stop
-    document.querySelector(".videoPlayer").src = document.querySelector(".videoPlayer").src;
+    //document.querySelectorAll(".videoPlayer").src += '';
+    closeVids();
+    // = document.querySelector(".videoPlayer").src;
   });
 }
 
+// Case: Clicked outside modal content
 document.addEventListener("click", e => {
     if (e.target == document.querySelector(".modal.is-visible")) {
       document.querySelector(".modal.is-visible").classList.remove(isVisible);
       // Reload src to force video player to stop
-      document.querySelector(".videoPlayer").src = document.querySelector(".videoPlayer").src;
+      closeVids();
+      //document.querySelector(".videoPlayer").src = document.querySelector(".videoPlayer").src;
     }
   });
   
+  // Case: Pushed ESC key
   document.addEventListener("keyup", e => {
     // if we press the ESC
     if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
       document.querySelector(".modal.is-visible").classList.remove(isVisible);
+      closeVids();
       // Reload src to force video player to stop
-      document.querySelector(".videoPlayer").src = document.querySelector(".videoPlayer").src;
+      //document.querySelector(".videoPlayer").src = document.querySelector(".videoPlayer").src;
     }
   });
+
+  function closeVids() {
+    const vidmodals = document.querySelectorAll(".videoPlayer")
+    vidmodals.forEach((item) => {
+      item.src += '';
+    });
+  }
